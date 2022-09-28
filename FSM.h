@@ -37,19 +37,19 @@ SC_MODULE (FSM) {
 	switch (CurrentState)
 	{
 		case 0:
-			if(_counter >= 10) // transiÃ§Ã£o apÃ³s 10s
+			if(_counter >= 10) // transição após 10s
 				CurrentState = Transition_p;
 			break;
 		case 1:
-			if(_counter >= 10) // transiÃ§Ã£o apÃ³s 10s
+			if(_counter >= 10) // transição após 10s
 				CurrentState = Open_c;
 			break;
 		case 2:
-			if(_counter >= 120 and button == 1) // transiÃ§Ã£o apÃ³s 10s
+			if(_counter >= 120 and button == 1) // transição após 10s
 				CurrentState = Transition_c;
 			break;
 		case 3:
-			if(_counter >= 10) // transiÃ§Ã£o apÃ³s 10s
+			if(_counter >= 10) // transição após 10s
 				CurrentState = Open_p;
 			break;
 		default:
@@ -64,19 +64,19 @@ SC_MODULE (FSM) {
 		switch (CurrentState)
 		{
 			case 0:
-				if(_counter >= 10) // transiÃ§Ã£o apÃ³s 10s
+				if(_counter >= 10) // transição após 10s
 					CurrentState = Transition_p;
 				break;
 			case 1:
-				if(_counter >= 10) // transiÃ§Ã£o apÃ³s 10s
+				if(_counter >= 10) // transição após 10s
 					CurrentState = Open_c;
 				break;
 			case 2:
-				if(_counter >= 120 and button == 1) // transiÃ§Ã£o apÃ³s 10s
+				if(_counter >= 120 and button == 1) // transição após 10s
 					CurrentState = Transition_c;
 				break;
 			case 3:
-				if(_counter >= 10) // transiÃ§Ã£o apÃ³s 10s
+				if(_counter >= 10) // transição após 10s
 					CurrentState = Open_p;
 				break;
 			default:
@@ -101,7 +101,7 @@ SC_CTOR(FSM): _counter("Contador") {
 	}
 
 private:
-	Counter<7> _counter; //  contador atÃ© 127 s
+	Counter<7> _counter; //  contador até 127 s
 	sc_signal<bool> _enable;
 	sc_signal<bool> _reset;
 	sc_signal<bool> _counterout;
